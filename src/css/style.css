@@ -257,6 +257,25 @@ button {
   }
 }
 
+.categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.categories a {
+  text-decoration: none;
+  color: var(--dark-grey);
+  text-align: center;
+}
+
+.categories img {
+  width: 80px;
+  height: 80px;
+}
+
 footer {
   font-size: var(--small-font);
   padding: 1em;
