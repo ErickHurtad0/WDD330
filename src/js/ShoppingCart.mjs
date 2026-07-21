@@ -13,7 +13,7 @@ function cartItemTemplate(item) {
     <h2 class="card__name">${item.Name}</h2>
   </a>
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
-  <<p class="cart-card__quantity">Qty: ${item.quantity}</p>
+  <p class="cart-card__quantity">Qty: ${item.quantity}</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
 </li>
 `;
@@ -40,5 +40,16 @@ export default class ShoppingCart {
       this.listElement,
       list
     );
+
+    const total = this.calculateTotal(list);
+
+    document.querySelector("#cart-total").textContent =
+      `$${total.toFixed(2)}`;
+  }
+
+  calculateTotal(list) {
+    return list.reduce((total, item) => {
+      return total + (item.FinalPrice * item.quantity);
+    }, 0);
   }
 }

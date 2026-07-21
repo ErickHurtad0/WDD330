@@ -8,7 +8,7 @@
 
     <title>Sleep Outside | Checkout</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
@@ -19,9 +19,77 @@
       <section class="products">
         <h2>Review & Place your Order</h2>
       </section>
+    
+
+    <form id="checkout-form">
+
+    <input
+    name="fname"
+    required
+    placeholder="First Name">
+    <input
+    name="lname"
+    required
+    placeholder="Last Name">
+    <input
+    name="street"
+    required
+    placeholder="Street Address">
+    <input
+    name="city"
+    required
+    placeholder="City">
+    <input
+    name="state"
+    required
+    placeholder="State">
+    <input
+    name="zip"
+    required
+    placeholder="Zip Code">
+    <input
+    name="cardNumber"
+    required
+    placeholder="Card Number">
+    <input
+    name="expiration"
+    required
+    placeholder="Expiration Date">
+    <input
+    name="code"
+    required
+    placeholder="Code">
+
+    <button type="submit">
+    Checkout
+    </button>
+
+    </form>
+
+
+    <section class="order-summary">
+
+    <p>Subtotal:
+    <span id="subtotal"></span>
+    </p>
+
+    <p>Tax:
+    <span id="tax"></span>
+    </p>
+
+    <p>Shipping:
+    <span id="shipping"></span>
+    </p>
+
+    <h3>Total:
+    <span id="orderTotal"></span>
+    </h3>
+
+    </section>
     </main>
 
     <footer id="main-footer"></footer>
     <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/checkout.js"></script>
   </body>
 </html>
