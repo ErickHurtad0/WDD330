@@ -46,19 +46,29 @@
     <input
     name="zip"
     required
+    pattern="[0-9]{5}"
+    maxlength="5"
+    inputmode="tel"
     placeholder="Zip Code">
     <input
     name="cardNumber"
     required
+    minlength="16"
+    maxlength="16"
+    inputmode="tel"
     placeholder="Card Number">
     <input
     name="expiration"
     required
-    placeholder="Expiration Date">
+    placeholder="MM/YY"
+    pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
     <input
     name="code"
     required
-    placeholder="Code">
+    minlength="3"
+    maxlength="4"
+    inputmode="tel"
+    placeholder="CVV">
 
     <button type="submit">
     Checkout

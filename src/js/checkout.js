@@ -1,5 +1,6 @@
 
 import CheckoutProcess from "./CheckoutProcess.mjs";
+import { alertMessage } from "./utils.mjs";
 
 const checkout = new CheckoutProcess();
 
@@ -18,10 +19,21 @@ document
 
     const form = event.target;
 
+    // Browser validation
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     try {
-      const result = await checkout.checkout(form);
-      console.log(result);
+      await checkout.checkout(form);
     } catch (err) {
       console.error(err);
+
+      const messages = Object.entries(err.message)
+        .map(([field, message]) => `<strong>${field}:</strong> ${message}`)
+        .join("<br>");
+
+      alertMessage(messages);
     }
   });

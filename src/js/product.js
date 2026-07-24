@@ -1,5 +1,5 @@
 
-import ProductData from "./ProductData.mjs";
+import ProductData from "./ExternalServices.mjs";
 import ProductDetails from "./ProductDetails.mjs";
 import { getParam } from "./utils.mjs";
 

@@ -67,6 +67,17 @@ export default class CheckoutProcess {
     order.shipping = this.shipping;
     order.orderTotal = this.total.toFixed(2);
 
-    return await this.externalServices.checkout(order);
-  }
+    try {
+        console.log(order);
+        const result = await this.externalServices.checkout(order);
+
+        localStorage.removeItem("so-cart");
+
+        window.location.href = "/checkout/success.html";
+
+        return result;
+    } catch (err) {
+        throw err;
+    }
+    }
 }
