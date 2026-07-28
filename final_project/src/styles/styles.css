@@ -1,0 +1,168 @@
+:root {
+  --primary: #7B61FF;
+  --secondary: #1E1B3A;
+  --accent: #FFFFFF;
+  --background: #0F1226;
+  --highlight: #FF9F6E;
+  --action: #3CCFCF;
+
+  --font-family: "Poppins", sans-serif;
+
+  --max-width: 1200px;
+  --transition: 0.3s ease;
+}
+
+@import url("./variables.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--accent);
+}
+
+/* ==========================
+   Header
+========================== */
+
+.header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  height: 52px;
+  width: auto;
+}
+
+.logo-container h1 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.nav a:hover {
+  color: var(--highlight);
+}
+
+.nav a.active {
+  color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--accent);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--highlight);
+  color: var(--background);
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero {
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.hero p {
+  color: #cfd2ff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.hero p2 {
+  color: #cfd2ff;
+  font-style: italic;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.search-form input {
+  width: 420px;
+  max-width: 100%;
+
+  padding: 1rem 1.2rem;
+
+  border: 2px solid var(--secondary);
+  border-radius: 12px;
+
+  background: var(--secondary);
+  color: var(--accent);
+
+  font-size: 1rem;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
