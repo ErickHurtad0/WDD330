@@ -37,17 +37,42 @@
           "Melomania: an inordinate liking for music or melody / excessive or abnormal attraction to music" <br>~ Merriam-Webster
         </p2>
 
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
+            id="search-input"
             type="text"
             placeholder="Search artists, albums or songs..."
           />
 
-          <button class="btn-primary">
+          <button
+            class="btn-primary"
+            type="submit">
             Search
           </button>
         </form>
       </div>
     </section>
+
+    <section id="random-section">
+
+        <h2 id="random-title">
+             Discover Something New
+        </h2>
+
+        <div class="random-grid"></div>
+
+    </section>
+
+    <section class="results" id="results-section">
+        <h2>Search Results</h2>
+
+        <div class="results-grid"></div>
+    </section>
+
+
   </body>
+
+  <footer>
+    <h3>Powered by Spotify APIs | © 2026 Erick Hurtado</h3>
+  </footer> 
 </html>
