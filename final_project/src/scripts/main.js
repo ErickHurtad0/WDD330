@@ -6,19 +6,23 @@ import {
   displayRandomAlbums,
   updateRandomTitle
 } from "./ui.js";
+import { openModal } from "./modal.js";
+import { closeModal } from "./modal.js";
 
 const form = document.querySelector("#search-form");
 const input = document.querySelector("#search-input");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
+if (form) {
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-  const query = input.value.trim();
+        const query = input.value.trim();
 
-  if (!query) return;
+        if (!query) return;
 
-  await handleSearch(query);
-});
+        await handleSearch(query);
+    });
+}
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -28,3 +32,7 @@ displayRandomAlbums(data.albums);
 
 updateRandomTitle(data.genre);
 });
+
+document
+.querySelector(".close-modal")
+.addEventListener("click", closeModal);

@@ -8,16 +8,14 @@ const genres = [
   "Hip Hop",
   "Electronic",
   "Indie",
-  "Latin",
   "Country",
   "Blues",
   "Alternative Rock",
   "Britpop",
-  "Folk Punk",
-  "Lo-fi",
+  "Lo-fi Hip Hop",
   "Salsa",
   "Japanese Traditional",
-  "Metal"
+  "Black Metal"
 ];
 
 const randomGenre =
