@@ -3,12 +3,12 @@ import { createCard } from "./card.js";
 
 export function displaySongs(songs) {
 
+    const hero = document.querySelector(".hero");
     const resultsSection = document.querySelector("#results-section");
     const grid = document.querySelector(".results-grid");
 
-    document
-        .querySelector("#random-section")
-        .classList.add("hidden");
+    hero.classList.add("search-mode");
+    hero.querySelector("h2").textContent = "Search Results";
 
     resultsSection.style.display = "block";
 
@@ -19,7 +19,6 @@ export function displaySongs(songs) {
     });
 
 }
-
 export function displayRandomAlbums(songs) {
 
     const grid = document.querySelector(".random-grid");
@@ -34,5 +33,5 @@ export function displayRandomAlbums(songs) {
 
 export function updateRandomTitle(genre) {
     const title = document.querySelector("#random-title");
-    title.textContent = `Discover Something New in ${genre}`;
+    title.textContent = `Discover your new favorite ${genre} album`;
 }

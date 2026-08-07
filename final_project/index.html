@@ -6,32 +6,41 @@
     <link rel="stylesheet" href="/src/styles/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/src/scripts/main.js"></script>
-    <title>Out For Music - Search (Home)</title>
+    <title>Out For Music - Home</title>
   </head>
 
-  <header class="header">
-    <div class="logo-container">
-      <img src="/src/assets/images/logo.png" alt="Out For Music Logo" class="logo">
-      <h1>Out for Music</h1>
-    </div>
+  <header>
+      <div class="logo">
+          <a href="#" id="logo-link">
+              <img src="src/assets/images/logo.png" alt="Site Logo">
+          </a>
 
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Genres</a></li>
-        <li><a href="src/favorites.html">Favorites</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
+          <a href="#" id="home-link">
+              <h1>Out For Music</h1>
+          </a>
+      </div>
+
+      <button id="menuButton" aria-label="Open Navigation">
+          ☰
+      </button>
+
+      <nav id="navigation">
+          <ul>
+              <li><a href="#" id="title-link" class="active">Home</a></li>
+              <li><a href="#">Discover</a></li>
+              <li><a href="src/favorites.html">Favorites</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
   </header>
 
   <body>
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-content">
         <h2>Discover Your Next Favorite Song</h2>
 
         <p>
-          Search millions of songs, artists, albums and playlists like a real melomaniac.
+          Search millions of songs, artists and albums like a real melomaniac.
         </p>
         <p2>
           "Melomania: an inordinate liking for music or melody / excessive or abnormal attraction to music" <br>~ Merriam-Webster
@@ -53,6 +62,14 @@
       </div>
     </section>
 
+    <section id="results-section" style="display:none;">
+
+        <h2 id="results-title"></h2>
+
+        <div class="results-grid"></div>
+
+    </section>
+
     <section id="random-section">
 
         <h2 id="random-title">
@@ -61,12 +78,6 @@
 
         <div class="random-grid"></div>
 
-    </section>
-
-    <section class="results" id="results-section">
-        <h2>Search Results</h2>
-
-        <div class="results-grid"></div>
     </section>
 
     <div id="album-modal" class="modal hidden">
@@ -105,6 +116,15 @@
   </body>
 
   <footer>
-    <h3>Powered by Spotify APIs | © 2026 Erick Hurtado</h3>
-  </footer> 
+      <div class="footer-info">
+          <p>oUt foR MuSIc</p>
+          <p>Powered by Spotify & Mercado Libre APIs</p>
+      </div>
+
+      <div class="footer-author">
+          <p>Erick Hurtado</p>
+          <p>WDD231</p>
+          <p id="lastModified"></p>
+      </div>
+  </footer>
 </html>
