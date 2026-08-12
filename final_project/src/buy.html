@@ -23,7 +23,7 @@
           <ul>
               <li><a href="../index.html">Home</a></li>
               <li><a href="../index.html#footer">Discover</a></li>
-              <li><a href="#" class="active">Favorites</a></li>
+              <li><a href="src/favorites.html">Favorites</a></li>
               <li><a href="#">Contact</a></li>
           </ul>
       </nav>
@@ -31,48 +31,19 @@
 
     <body>
 
-        <main>
-        <h1 id="fav">My Favorites</h1>
-        <section id="favorites-container"></section>
-        </main>
+        <section class="buy-header">
 
-        <script type="module" src="./favorites/favoritesPage.js"></script>
+            <h1 id="album-title"></h1>
 
-        <div id="album-modal" class="modal hidden">
-        <div class="modal-content">
+            <p id="artist-name"></p>
 
-            <button class="close-modal">&times;</button>
+            <span class="subtitle">
+                Available Releases
+            </span>
 
-            <img id="modal-cover" alt="Album Cover">
+        </section>
 
-            <h2 id="modal-song"></h2>
-
-            <p>
-                <strong>Artist:</strong>
-                <span id="modal-artist"></span>
-            </p>
-
-            <p>
-                <strong>Album:</strong>
-                <span id="modal-album"></span>
-            </p>
-
-            <div class="modal-buttons">
-                <button id="favorite-btn">
-                    ❤️ Add to Favorites
-                </button>
-
-                <button id="remove-btn" hidden>
-                    🗑 Remove from Favorites
-                </button>
-
-                <button id="buy-btn">
-                    🛒 Buy CD / Vinyl
-                </button>
-            </div>
-
-        </div>
-    </div>
+        <div id="discogs-results"></div>
 
     </body>
 

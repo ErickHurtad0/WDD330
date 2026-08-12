@@ -31,7 +31,12 @@ export function openModal(song, options = {}) {
 
     modal.classList.remove("hidden");
 
-    favoriteBtn.disabled = isFavorite(currentAlbum.id);
+    const liked = isFavorite(currentAlbum.id);
+
+    favoriteBtn.disabled = liked;
+    favoriteBtn.textContent = liked
+        ? "Liked"
+        : "Add to Favorites";
 
 
 }
@@ -77,7 +82,11 @@ if (favoriteBtn) {
 
         addFavorite(currentAlbum);
 
+        addFavorite(currentAlbum);
+
         favoriteBtn.disabled = true;
+        favoriteBtn.textContent = "Liked";
+        favoriteBtn.classList.add("liked");
 
     });
 
@@ -87,4 +96,8 @@ const closeButton = document.querySelector(".close-modal");
 
 if (closeButton) {
     closeButton.addEventListener("click", closeModal);
+}
+
+export function getCurrentAlbum() {
+    return currentAlbum;
 }

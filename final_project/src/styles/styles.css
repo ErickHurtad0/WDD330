@@ -711,7 +711,232 @@ footer {
     margin-bottom: 2rem;
 }
 
+#discogs-results{
 
+    width:min(1400px,90%);
+    margin:3rem auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:2rem;
+
+}
+
+#discogs-results{
+
+    width:min(1400px,90%);
+    margin:3rem auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:2rem;
+
+}
+
+.release-image{
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.release-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.35s;
+
+}
+
+.release-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.release-content{
+
+    padding:1.2rem;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:.9rem;
+
+    flex:1;
+
+}
+
+.release-content h3{
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+    margin:0;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+
+.release-meta{
+
+    display:flex;
+
+    gap:.6rem;
+
+    flex-wrap:wrap;
+
+}
+
+.badge{
+
+    padding:.3rem .8rem;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.year{
+
+    background:#262626;
+
+    color:#d1d1d1;
+
+}
+
+.format{
+
+    background:#1DB954;
+
+    color:white;
+
+}
+
+.country{
+
+    color:#9d9d9d;
+
+    font-size:.9rem;
+
+}
+
+.buy-link{
+
+    margin-top:auto;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    background:#1DB954;
+
+    color:white;
+
+    padding:.9rem;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.buy-link:hover{
+
+    background:#18a34a;
+
+}
+
+.buy-header{
+
+    max-width:1200px;
+
+    margin:3rem auto 2rem;
+
+    text-align:center;
+
+    padding:0 2rem;
+
+}
+
+#album-title{
+
+    color:white;
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    margin-bottom:.5rem;
+
+}
+
+#artist-name{
+
+    color:#1DB954;
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    margin-bottom:1rem;
+
+}
+
+.subtitle{
+
+    color:#a5a5a5;
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.format-cd{
+    background:#2563eb;
+    color:white;
+}
+
+.format-vinyl{
+    background:#8b5cf6;
+    color:white;
+}
+
+.format-default{
+    background:#555;
+    color:white;
+}
+
+#favorite-btn.liked {
+    background: #1DB954;
+    color: white;
+    border-color: #1DB954;
+}
 
 
 

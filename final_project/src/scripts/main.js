@@ -8,6 +8,7 @@ import {
 } from "./ui.js";
 import { openModal } from "./modal.js";
 import { closeModal } from "./modal.js";
+import "./discogs.js";
 
 const form = document.querySelector("#search-form");
 const input = document.querySelector("#search-input");
