@@ -12,7 +12,7 @@ if (buyBtn) {
         const albumName = encodeURIComponent(album.album.name);
 
         window.location.href =
-            `src/buy.html?artist=${artist}&album=${albumName}`;
+            `/src/buy.html?artist=${artist}&album=${albumName}`;
     });
 }
 

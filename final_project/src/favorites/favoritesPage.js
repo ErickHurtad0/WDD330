@@ -1,6 +1,7 @@
 
 import { getFavorites } from "../scripts/favorites.js";
 import { createCard } from "../scripts/card.js";
+import "../scripts/discogs.js";
 
 const container = document.querySelector("#favorites-container");
 
