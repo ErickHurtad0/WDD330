@@ -10,6 +10,9 @@ async function loadPage() {
     const artist = params.get("artist");
     const album = params.get("album");
 
+    console.log(document.querySelector("#album-title"));
+    console.log(document.querySelector("#artist-name"));
+
     document.querySelector("#album-title").textContent = album;
 
     document.querySelector("#artist-name").textContent = artist;
@@ -86,3 +89,19 @@ function displayResults(results) {
             `;
     });
 }
+
+const menuButton = document.querySelector("#menuButton");
+const navigation = document.querySelector("#navigation");
+
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+
+    if (navigation.classList.contains("open")) {
+        menuButton.textContent = "✕";
+    } else {
+        menuButton.textContent = "☰";
+    }
+});
+
+document.querySelector("#lastModified").textContent =
+`Last Modified: ${document.lastModified}`;
